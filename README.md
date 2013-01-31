@@ -1,0 +1,1 @@
+Hardware modification application I made, needs to be updated to work without cloud dbase, also run rate calculation not complete

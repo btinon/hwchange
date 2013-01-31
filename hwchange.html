@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<!-- mar 2 2011 added new procs and fixed ram selections -->
+<title>Hardware Change Form</title>
+<body bgcolor="lightgrey">
+<form action="hwchange.php" method="POST">
+<table width="50%">
+<tr>
+<td>Server ID<input type="text" name="serverid" size="5" maxlength="5"></td>
+<td>Tech Initials: <input type="text" name="initials" size="3" maxlength="3"></td>
+<td><a href="reports.html">Reports</a></td>
+</tr>
+</table>
+<br>
+
+<table width="100%" align="right">
+<thead>
+<th>Processor removed</th>
+<th>DIMM1 removed</th>
+<th>DIMM2 removed</th>
+<th>DIMM3 removed</th>
+<th>DIMM4 removed</th>
+<th>HDD1 removed</th>
+<th>HDD2 removed</th>
+<th>RAID removed?</th>
+<th>Firewall removed?</th>
+</thead>
+<tr align="center">
+<td><input type="radio" name="procout" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm1out" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm2out" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm3out" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm4out" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="hdd1out" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="hdd2out" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="raidout" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="fwallout" value="clear" checked="checked">Clear selection</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="cel775">Cel-775</td>
+<td><input type="radio" name="dimm1out" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="dimm2out" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="dimm3out" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="dimm4out" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="hdd1out" value="120gb">120 GB</td>
+<td><input type="radio" name="hdd2out" value="120gb">120 GB</td>
+<td><input type="radio" name="raidout" value="raid1520outyn">1520</td>
+<td><input type="radio" name="fwallout" value="fwall501outyn">501</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="p4775">P4-775</td>
+<td><input type="radio" name="dimm1out" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="dimm2out" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="dimm3out" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="dimm4out" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="hdd1out" value="160gb">160 GB</td>
+<td><input type="radio" name="hdd2out" value="160gb">160 GB</td>
+<td><input type="radio" name="raidout" value="raid1720outyn">1720</td>
+<td><input type="radio" name="fwallout" value="fwall5505outyn">5505</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="p46600">P4-E6600</td>
+<td><input type="radio" name="dimm1out" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="dimm2out" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="dimm3out" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="dimm4out" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="hdd1out" value="300gb">300 GB</td>
+<td><input type="radio" name="hdd2out" value="300gb">300 GB</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="c2d6400">C2D-6400</td>
+<td><input type="radio" name="dimm1out" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="dimm2out" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="dimm3out" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="dimm4out" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="hdd1out" value="1tb">1 TB</td>
+<td><input type="radio" name="hdd2out" value="1tb">1 TB</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="c2d6600">C2D-6600</td>
+<td><input type="radio" name="dimm1out" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="dimm2out" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="dimm3out" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="dimm4out" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="hdd1out" value="64gb">64 GB(SSD)</td>
+<td><input type="radio" name="hdd2out" value="64gb">64 GB(SSD)</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="c2d6700">C2D-6700</td>
+<td><input type="radio" name="dimm1out" value="ddr11gb">DDR1 1GB</td>
+<td><input type="radio" name="dimm2out" value="ddr11gb">DDR1 1GB</td>
+<td><input type="radio" name="dimm3out" value="ddr11gb">DDR1 1GB</td>
+<td><input type="radio" name="dimm4out" value="ddr11gb">DDR1 1GB</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="c2d7500">C2D-7500</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="c2q9300">C2Q-9300</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="c2q9400">C2Q-9400</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procout" value="c2q9550">C2Q-9550</td>
+</tr>
+</table>
+<hr>
+<p>
+<table width="100%" align="right">
+<thead>
+<th>Processor added</th>
+<th>DIMM1 added</th>
+<th>DIMM2 added</th>
+<th>DIMM3 added</th>
+<th>DIMM4 added</th>
+<th>HDD1 added</th>
+<th>HDD2 added</th>
+<th>RAID added</th>
+<th>Firewall added</th>
+</thead>
+<tr align="center">
+<td><input type="radio" name="procin" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm1in" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm2in" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm3in" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="dimm4in" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="hdd1in" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="hdd2in" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="raidin" value="clear" checked="checked">Clear selection</td>
+<td><input type="radio" name="fwallin" value="clear" checked="checked">Clear selection</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="cel775">Cel-775</td>
+<td><input type="radio" name="dimm1in" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="dimm2in" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="dimm3in" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="dimm4in" value="ddr21gb">DDR2 1GB</td>
+<td><input type="radio" name="hdd1in" value="120gb">120 GB</td>
+<td><input type="radio" name="hdd2in" value="120gb">120 GB</td>
+<td><input type="radio" name="raidin" value="raid1520inyn">1520</td>
+<td><input type="radio" name="fwallin" value="fwall501inyn">501</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="p4775">P4-775</td>
+<td><input type="radio" name="dimm1in" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="dimm2in" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="dimm3in" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="dimm4in" value="ddr22gb">DDR2 2GB</td>
+<td><input type="radio" name="hdd1in" value="160gb">160 GB</td>
+<td><input type="radio" name="hdd2in" value="160gb">160 GB</td>
+<td><input type="radio" name="raidin" value="raid1720inyn">1720</td>
+<td><input type="radio" name="fwallin" value="fwall5505inyn">5505</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="p46600">P4-E6600</td>
+<td><input type="radio" name="dimm1in" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="dimm2in" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="dimm3in" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="dimm4in" value="ddr24gb">DDR2 4GB</td>
+<td><input type="radio" name="hdd1in" value="300gb">300 GB</td>
+<td><input type="radio" name="hdd2in" value="300gb">300 GB</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="c2d6400">C2D-6400</td>
+<td><input type="radio" name="dimm1in" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="dimm2in" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="dimm3in" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="dimm4in" value="ddr32gb">DDR3 2GB</td>
+<td><input type="radio" name="hdd1in" value="1tb">1 TB</td>
+<td><input type="radio" name="hdd2in" value="1tb">1 TB</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="c2d6600">C2D-6600</td>
+<td><input type="radio" name="dimm1in" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="dimm2in" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="dimm3in" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="dimm4in" value="ddr34gb">DDR3 4GB</td>
+<td><input type="radio" name="hdd1in" value="64gb">64 GB(SSD)</td>
+<td><input type="radio" name="hdd2in" value="64gb">64 GB(SSD)</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="c2d6700">C2D-6700</td>
+<td><input type="radio" name="dimm1in" value="ddr11gb">DDR1 1GB</td>
+<td><input type="radio" name="dimm2in" value="ddr11gb">DDR1 1GB</td>
+<td><input type="radio" name="dimm3in" value="ddr11gb">DDR1 1GB</td>
+<td><input type="radio" name="dimm4in" value="ddr11gb">DDR1 1GB</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="c2d7500">C2D-7500</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="c2q9300">C2Q-9300</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="c2q9400">C2Q-9400</td>
+</tr>
+<tr align="center">
+<td><input type="radio" name="procin" value="c2q9550">C2Q-9550</td>
+</tr>
+</table>
+<hr><hr>
+Server Notes: <TEXTAREA NAME="servernotes" ROWS="4" COLS="80">
+</TEXTAREA>
+
+<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
